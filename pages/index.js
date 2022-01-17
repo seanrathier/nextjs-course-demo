@@ -22,6 +22,7 @@ export const getStaticProps = async () => {
     return transformMongoMeetup(meetup);
   });
   return {
+    revalidate: 1,
     props: {
       meetups,
     },
